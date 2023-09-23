@@ -5,9 +5,7 @@ import time
 
 def test_google_contains_text():
     browser.open('https://google.com')
-    time.sleep(1)
     browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
-    time.sleep(1)
     browser.element('[id="search"]').should(have.text('User-oriented Web UI browser tests in Python'))
 
 
